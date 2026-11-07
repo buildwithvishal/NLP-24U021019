@@ -1,0 +1,25 @@
+{
+  "dataset_rows_after_cleaning": 1000,
+  "train_rows": 750,
+  "test_rows": 250,
+  "split_method": "GroupShuffleSplit by context to avoid paired-context leakage",
+  "dataset_note": "Small illustrative dataset; metrics are preliminary and not generalizable.",
+  "models": {
+    "baseline": {
+      "description": "Target utterance only",
+      "accuracy": 0.896,
+      "precision_macro": 0.8957373271889402,
+      "recall_macro": 0.8977740607308287,
+      "f1_macro": 0.8958333333333334,
+      "classification_report": "              precision    recall  f1-score   support\n\nnon_humorous       0.93      0.87      0.90       134\n    humorous       0.86      0.92      0.89       116\n\n    accuracy                           0.90       250\n   macro avg       0.90      0.90      0.90       250\nweighted avg       0.90      0.90      0.90       250\n"
+    },
+    "context_aware": {
+      "description": "Context plus target utterance",
+      "accuracy": 0.904,
+      "precision_macro": 0.9033683401639344,
+      "recall_macro": 0.9052367472979927,
+      "f1_macro": 0.9037783052152158,
+      "classification_report": "              precision    recall  f1-score   support\n\nnon_humorous       0.93      0.89      0.91       134\n    humorous       0.88      0.92      0.90       116\n\n    accuracy                           0.90       250\n   macro avg       0.90      0.91      0.90       250\nweighted avg       0.91      0.90      0.90       250\n"
+    }
+  }
+}
